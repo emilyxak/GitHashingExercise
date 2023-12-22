@@ -1,0 +1,4 @@
+input_integer=$1
+hash_value=$(echo -n "$input_integer" | sha256sum | awk '{print $1}')
+echo "$hash_value" > hash_output.txt
+
